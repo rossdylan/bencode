@@ -5,6 +5,7 @@ import (
 	"testing"
 )
 
+// Test string encoding
 func TestBencodeString(t *testing.T) {
 	result := BencodeString("testing")
 	expectedResult := "7:testing"
@@ -14,6 +15,7 @@ func TestBencodeString(t *testing.T) {
 	fmt.Println("EncodedString: " + result)
 }
 
+// Test int encoding
 func TestBencodeInt(t *testing.T) {
 	result := BencodeInt(23)
 	expectedResult := "i23e"
@@ -23,6 +25,7 @@ func TestBencodeInt(t *testing.T) {
 	fmt.Println("EncodedInt: " + result)
 }
 
+// Test BencodedLists
 func TestBencodeList(t *testing.T) {
 	list := BencodedList{}
 	list.AppendInt(20)
@@ -35,6 +38,7 @@ func TestBencodeList(t *testing.T) {
 	fmt.Println("EncodedList: " + list.StringValue())
 }
 
+// Test BencodedDict
 func TestBencodedDict(t *testing.T) {
 	dict := BencodedDict{}
 	testList := BencodedList{}
