@@ -5,11 +5,11 @@ import (
 )
 
 type BencodedComposite interface {
-    AppendString()
-    AppendInt()
-    AppendList()
-    AppendDict()
-    StringValue()
+	AppendString()
+	AppendInt()
+	AppendList()
+	AppendDict()
+	StringValue()
 }
 
 func BencodeString(str string) string {
@@ -17,8 +17,5 @@ func BencodeString(str string) string {
 }
 
 func BencodeInt(i int) string {
-    return "i" + strconv.Itoa(i) + "e"
+	return "i" + strconv.Itoa(i) + "e"
 }
-
-
-
